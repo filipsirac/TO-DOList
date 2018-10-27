@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/red">
+
+        <ImageView
+            android:id="@id/icon_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:src="@drawable/icon_back" />
+
+        <TextView
+            android:id="@id/edit_to_do"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/edit_to_do"
+            android:textAllCaps="true"
+            android:textColor="@color/silver"
+            android:textSize="25sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@id/title_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/title"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@id/title_edit"
+                style="@style/EditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:inputType="textCapSentences"
+                android:maxLines="1" />
+
+            <TextView
+                android:id="@id/description_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:text="@string/description"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@id/description_edit"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/edit_text_rectangle"
+                android:gravity="start|top"
+                android:inputType="textMultiLine|textCapSentences"
+                android:padding="5dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@id/date_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableEnd="@drawable/icon_date"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:text="@string/date"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/date_label"
+                    android:layout_marginStart="20dp"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    tools:text="16.8.2017." />
+
+                <TextView
+                    android:id="@id/time_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableEnd="@drawable/icon_time"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:text="@string/time"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@id/time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@id/time_label"
+                    android:layout_marginEnd="20dp"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    tools:text="12:00" />
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@id/save_changes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/red"
+                android:text="@string/save_changes"
+                android:textAllCaps="true"
+                android:textColor="@color/silver"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
